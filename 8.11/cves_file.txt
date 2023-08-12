@@ -1,0 +1,189 @@
+======================
+[ TITLE ] ZKTeco BioAccess IVS信息泄露漏洞
+[ TIME  ] 2023-08-11 17:00:05
+[ CVE   ] CNVD-2023-62716 (CVE-2023-38955)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62716
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] ZKTeco BioAccess IVS访问控制错误漏洞
+[ TIME  ] 2023-08-11 17:00:07
+[ CVE   ] CNVD-2023-62717 (CVE-2023-38958)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62717
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] ZKTeco BioAccess IVS路径遍历漏洞
+[ TIME  ] 2023-08-11 17:00:09
+[ CVE   ] CNVD-2023-62718 (CVE-2023-38956)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62718
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] MotoCMS代码执行漏洞
+[ TIME  ] 2023-08-11 17:00:11
+[ CVE   ] CNVD-2023-62829 (CVE-2023-36210)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62829
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] JetBrains TeamCity拒绝服务漏洞
+[ TIME  ] 2023-08-11 17:00:13
+[ CVE   ] CNVD-2023-62625 (CVE-2023-39174)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62625
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] JetBrains TeamCity权限提升漏洞
+[ TIME  ] 2023-08-11 17:00:15
+[ CVE   ] CNVD-2023-62626 (CVE-2023-39173)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62626
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] JetBrains TeamCity跨站脚本漏洞
+[ TIME  ] 2023-08-11 17:00:17
+[ CVE   ] CNVD-2023-62627 (CVE-2023-39175)
+[ SRC   ] 国家信息安全漏洞共享平台（CNVD）
+[ URL   ] https://www.cnvd.org.cn/flaw/show/CNVD-2023-62627
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] SAP PowerDesigner - version 16.7, has improper access control which might allow an unauthenticated attacker to run arbitrary queries against the back-end database via Proxy.
+[ TIME  ] 2023-08-08 01:15:17 
+[ CVE   ] CVE-2023-37483
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-37483
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Metabase is an open-source business intelligence and analytics platform. Prior to versions 0.43.7.3, 0.44.7.3, 0.45.4.3, 0.46.6.4, 1.43.7.3, 1.44.7.3, 1.45.4.3, and 1.46.6.4, a vulnerability could potentially allow remote code execution on one's Metabase server. The core issue is that one of the supported data warehouses (an embedded in-memory database H2), exposes a number of ways for a connection string to include code that is then executed by the process running the embedded database. Because Metabase allows users to connect to databases, this means that a user supplied string can be used to inject executable code. Metabase allows users to validate their connection string before adding a database (including on setup), and this validation API was the primary vector used as it can be called without validation. Versions 0.43.7.3, 0.44.7.3, 0.45.4.3, 0.46.6.4, 1.43.7.3, 1.44.7.3, 1.45.4.3, and 1.46.6.4 fix this issue by removing the ability of users to add H2 databases entirely. As a workaround, it is possible to block these vulnerabilities at the network level by blocking the endpoints `POST /api/database`, `PUT /api/database/:id`, and `POST /api/setup/validateuntil`. Those who use H2 as a file-based database should migrate to SQLite.
+[ TIME  ] 2023-08-04 16:15:09 
+[ CVE   ] CVE-2023-37470
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-37470
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] A vulnerability has been identified in RUGGEDCOM CROSSBOW (All versions &lt; V5.4). The affected applications accept unauthenticated file write messages. An unauthenticated remote attacker could write arbitrary files to the affected application's file system.
+[ TIME  ] 2023-08-08 10:15:15 
+[ CVE   ] CVE-2023-37373
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-37373
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] A vulnerability has been identified in RUGGEDCOM CROSSBOW (All versions &lt; V5.4). The affected applications is vulnerable to SQL injection. This could allow an unauthenticated remote attackers to execute arbitrary SQL queries on the server database.
+[ TIME  ] 2023-08-08 10:15:15 
+[ CVE   ] CVE-2023-37372
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-37372
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] In WS-Inc J WBEM Server 4.7.4 before 4.7.5, the CIM-XML protocol adapter does not disable entity resolution. This allows context-dependent attackers to read arbitrary files or cause a denial of service, a similar issue to CVE-2013-4152.
+[ TIME  ] 2023-08-03 03:15:10 
+[ CVE   ] CVE-2023-37364
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-37364
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] An authenticated command injection vulnerability exists in the AOS-CX command line interface. Successful exploitation of this vulnerability results in the ability to execute arbitrary commands on the underlying operating system as a privileged user on the affected switch. This allows an attacker to fully compromise the underlying operating system on the device running AOS-CX.
+[ TIME  ] 2023-08-01 19:15:09 
+[ CVE   ] CVE-2023-3718
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-3718
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Farmakom Remote Administration Console allows SQL Injection.This issue affects Remote Administration Console: before 1.02.
+[ TIME  ] 2023-08-08 11:15:11 
+[ CVE   ] CVE-2023-3717
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-3717
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Oduyo Online Collection Software allows SQL Injection.This issue affects Online Collection Software: before 1.0.1.
+[ TIME  ] 2023-08-08 12:15:12 
+[ CVE   ] CVE-2023-3716
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-3716
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Microsoft Message Queuing Information Disclosure Vulnerability
+[ TIME  ] 2023-08-08 18:15:20 
+[ CVE   ] CVE-2023-36913
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-36913
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Microsoft Message Queuing Denial of Service Vulnerability
+[ TIME  ] 2023-08-08 18:15:19 
+[ CVE   ] CVE-2023-36912
+[ SRC   ] 美国国家漏洞数据库（NVD）
+[ URL   ] https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2023-36912
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Race condition in some Intel(R) NUC BIOS firmware may allow a privileged user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-34438
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-34438
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Protection mechanism failure in some Intel(R) RealSense(TM) ID software for Intel(R) RealSense(TM) 450 FA in version 0.25.0 may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-34427
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-34427
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Uncontrolled search path element for some Intel(R) Server Board M10JNP2SB integrated BMC video drivers before version 3.0 for Microsoft Windows and before version 1.13.4 for linux may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-34355
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-34355
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Race condition in some Intel(R) NUC BIOS firmware may allow a privileged user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-34349
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-34349
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper input validation in some Intel(R) NUC BIOS firmware may allow a privileged user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-34086
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-34086
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Out-of-bounds write in some Intel(R) RealSense(TM) ID software for Intel(R) RealSense(TM) 450 FA in version 0.25.0 may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-33877
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-33877
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper buffer restrictions in some Intel(R) RealSense(TM) ID software for Intel(R) RealSense(TM) 450 FA in version 0.25.0 may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-33867
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-33867
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Incorrect default permissions in some Intel(R) RealSense(TM) SDKs in version 0.25.0 may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-32663
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-32663
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper buffer restrictions in some Intel(R) RealSense(TM) ID software for Intel(R) RealSense(TM) 450 FA in version 0.25.0 may allow an authenticated user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-32656
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-32656
+[ TIBD  ] https://tibd.chamd5.org
+======================
+[ TITLE ] Improper input validation in some Intel(R) NUC Rugged Kit, Intel(R) NUC Kit and Intel(R) Compute Element BIOS firmware may allow a privileged user to potentially enable escalation of privilege via local access.
+[ TIME  ] 2023-08-11 03:15:00
+[ CVE   ] CVE-2023-32617
+[ SRC   ] Tenable (Nessus)
+[ URL   ] https://www.tenable.com/cve/CVE-2023-32617
+[ TIBD  ] https://tibd.chamd5.org
